@@ -1,0 +1,51 @@
+
+### 开发规范和说明文件 ###
+下文中的 root/ 代指项目根路径
+
+# 项目启动和打包
+npm run dev
+npm run build
+
+# 关于命名规范和文件说明
+- api/：子文件夹命名以全小写字母+中横线分隔。
+- components/：子文件夹以大驼峰方式命名，只存放可复用的通用组件，不放业务相关组件。
+- directives/： 子文件夹命名以全小写字母+中横线分隔。
+- store/modules/：文件夹下不可再新建文件夹，否则扫描不到新建文件夹下的模块js。
+- styles/index.scss: 自定义全局样式文件。
+- utils/lsOperation.js: localstorage存储操作文件。
+- views/admin: 该文件夹存放<系统管理>模块下的页面组件，其它非系统相关页面组件请重新创建文件夹存放。
+- root/setting.js: 系统设置文件，修改后需要重启服务生效。更多webpack配置请修改root/vue.config.js文件。
+
+
+# 关于环境变量
+root/.env.development 和 root/.env.production 文件用于配置开发环境和生产环境变量;
+自定义变量必须以 VUE_APP_ 为前缀, 如：VUE_APP_BASE_API;
+使用 process.env.VUE_APP_BASE_API 获取变量值, 值唯一类型是字符串。
+
+
+# 关于使用统一图标
+.table-operation-item 为全局变量, 设置了margin-left: 10px和鼠标悬浮变色样式，根据使用情况添加。
+
+<span class="table-operation-item" @click="addRole">
+	<i class="el-icon-circle-plus-outline"></i> 添加
+</span>
+
+<span class="table-operation-item" @click="">
+	<i class="el-icon-warning-outline"></i> 停用
+</span>
+
+<span class="table-operation-item" @click="">
+	<i class="el-icon-circle-check"></i> 启用
+</span>
+
+<span class="table-operation-item" @click="">
+	<i class="el-icon-remove-outline"></i> 删除
+</span>
+
+<span class="table-operation-item" @click="">
+	<i class="el-icon-edit-outline"></i> 编辑
+</span>
+
+<span class="table-operation-item" @click="">
+	<i class="el-icon-refresh-left"></i> 返回
+</span>

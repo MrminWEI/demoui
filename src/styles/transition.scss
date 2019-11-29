@@ -1,0 +1,64 @@
+// AppMain router-view切换动画
+
+/* fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .3s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+// 动画显示
+.fade-drawer-parent-enter-active,
+.fade-drawer-parent-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-drawer-parent-enter,
+.fade-drawer-parent-leave-active {
+  opacity: 1;
+}
+
+// 滑动显示
+.slide-drawer-leave-active,
+.slide-drawer-enter-active {
+  transition: all .4s;
+}
+
+.slide-drawer-enter {
+  transform: translateX(260px);
+}
+
+.slide-drawer-leave-to {
+  transform: translateX(260px);
+}
+
+// 渐显
+.fade-drawer-enter-active,
+.fade-drawer-leave-active {
+  transition: opacity 0.4s;
+}
+
+.fade-drawer-enter,
+.fade-drawer-leave-active {
+  opacity: 0;
+}
